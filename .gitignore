@@ -24,4 +24,4 @@ yarn-error.log*
 
 # additionals
 /do_not_upload
-/project-starter
+/project_starter
