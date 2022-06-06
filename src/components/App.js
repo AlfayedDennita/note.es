@@ -75,7 +75,7 @@ class App extends React.Component {
       return {
         ...previousState,
         filterQuery: event.target.value,
-      }
+      };
     });
   }
 

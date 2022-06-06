@@ -274,7 +274,7 @@ main {
   word-break: break-word;
 }
 
-.note-card > footer .actions {
+.note-card > footer {
   display: flex;
   gap: 0.5rem;
   align-items: center;

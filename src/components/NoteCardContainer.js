@@ -1,7 +1,7 @@
 import NoteCard from "./NoteCard";
 
 function NoteCardContainer({
-  notes, toggleNoteStatusEvent, deleteNoteEvent, filterQuery
+  notes, toggleNoteStatusEvent, deleteNoteEvent, filterQuery,
 }) {
   const filteredNotes = notes.filter((note) => note.title.toLowerCase().indexOf(filterQuery.toLowerCase()) >= 0);
   const isNotesEmpty = filteredNotes.length <= 0;
@@ -14,13 +14,12 @@ function NoteCardContainer({
         : filteredNotes.map((note) => (
           <NoteCard
             key={note.id}
-            noteId={note.id}
             title={note.title}
             body={note.body}
             isArchieved={note.archieved}
             createdAt={note.createdAt}
-            toggleNoteStatusEvent={toggleNoteStatusEvent}
-            deleteNoteEvent={deleteNoteEvent}
+            toggleNoteStatusEvent={() => toggleNoteStatusEvent(note.id)}
+            deleteNoteEvent={() => deleteNoteEvent(note.id)}
           />
         ))
       }
