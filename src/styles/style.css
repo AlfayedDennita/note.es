@@ -137,7 +137,7 @@ input[type="text"], textarea {
 
 :is(input[type="text"], textarea):focus {
   border-color: var(--secondary-color);
-  outline: 3px solid var(--secondary-color);
+  outline-width: 3px;
 }
 
 textarea {
