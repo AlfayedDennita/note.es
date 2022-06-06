@@ -137,7 +137,7 @@ input[type="text"], textarea {
 
 :is(input[type="text"], textarea):focus {
   border-color: var(--secondary-color);
-  outline-width: 3px;
+  outline: 3px solid var(--secondary-color);
 }
 
 textarea {
@@ -162,12 +162,17 @@ a, button, input, textarea, select {
 
 /* Element Styles */
 
+#root > :is(header, footer)::selection {
+  background-color: rgba(var(--bg-color-rgb), 0.75);
+  color: var(--primary-color);
+}
+
 /* Header */
 
 #root > header {
   display: flex;
   justify-content: center;
-  padding: 1.25rem 1rem;
+  padding: 1.25rem;
   margin-bottom: 0.5rem;
   background-color: var(--primary-color);
   border-bottom-left-radius: 1.25rem;
@@ -214,7 +219,7 @@ main {
   align-items: center;
   gap: 0.5rem;
   flex-wrap: wrap;
-  padding: 2rem 0 1.5rem 0;
+  padding: 2rem 0;
 }
 
 .section-card > header h2 {
@@ -228,7 +233,7 @@ main {
 }
 
 .section-card > .content {
-  padding: 2rem 0 1.5rem 0;
+  padding: 2rem 0;
   border-top: 2px solid rgba(var(--secondary-color-rgb), 0.75);
 }
 
@@ -295,7 +300,7 @@ main {
 /* Footer */
 
 #root > footer {
-  padding: 1.25rem 1rem;
+  padding: 1.25rem;
   margin-top: 0.5rem;
   background-color: var(--primary-color);
   border-top-left-radius: 1.25rem;
